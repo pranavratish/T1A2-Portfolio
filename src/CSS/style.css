@@ -14,6 +14,7 @@ body {
     color: var(--beige);
     display: flex;
     flex-direction: column;
+    margin: 0;
     /*fallback height*/
     min-height: 100vh;
     /*small viewport height*/
@@ -22,9 +23,6 @@ body {
 
 /*header styling*/
 header {
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
     background-color: var(--dark-grey-blue);
 }
 
@@ -35,9 +33,6 @@ footer {
     align-items: center;
     /*positioning and padding*/
     padding: 20px;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-bottom: -10px;
     margin-top: auto;
     /*styling*/
     background-color: var(--navy);
@@ -53,7 +48,6 @@ footer {
     background-color: var(--dark-grey-blue);
     font-size: 1.5rem;
     /*postioning*/
-    margin-right: 40px;
     height: 75%;
     width: 50%;
     max-width: 450px;
@@ -144,7 +138,6 @@ nav {
 }
 
 .blurb {
-    margin-left: -20px;
     height: 35rem;
     width: 100%;
     background-image: repeating-radial-gradient(var(--navy) 9%, var(--dark-blue) 10%);
@@ -155,13 +148,7 @@ nav {
     font-style: italic;
 }
 
-.homepageMain {
-    margin-right: -40px;
-}
-
 .blog-preview {
-    margin-left: -20px;
-    margin-right: 20px;
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -174,4 +161,59 @@ nav {
 .blog-preview a {
     color: rgb(188, 223, 224);
     font-style: italic;
+}
+
+@media only screen and (min-width: 600px) {
+    .ham-menu {
+        display: none;
+    }
+    
+    .off-screen-menu {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    header {
+        margin: -20px;
+    }
+
+    .desktop-tablet-nav {
+        display: initial;
+    }
+
+    .desktop-tablet-nav h1 {
+        margin-left: 50px;
+        margin-right: 120px;
+        padding-bottom: 10px;
+    }
+
+    .desktop-tablet-nav ul {
+        list-style-type: none;
+        background-color: var(--dark-blue);
+        padding: 0;
+        margin: 0;
+        padding-top: 10px;
+        overflow: hidden;
+    }
+
+    .desktop-tablet-nav a {
+        color: var(--beige);
+        text-decoration: none;
+        padding: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .desktop-tablet-nav a:hover {
+        background-color: #152c44;
+    }
+
+    .desktop-tablet-nav li {
+        float: left;
+    }
+    
 }
