@@ -40,7 +40,7 @@
     </header>
     <main class="projectsMain">
         <div class="tiles">
-            <div class="one">Study History and Certs</div>
+            <div class="one"><p>Study History and Certs<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="toggleButton">Click Here</button></p></div>
             <a href="https://github.com/pranavratish/Black-Box" target="_blank"><div class="two">Black-Box</div></a>
             <a href="https://github.com/pranavratish/userdata-app" target="_blank"><div class="three">User Data (test) app</div></a>
             <a href="https://github.com/pranavratish/T1A2-Portfolio" target="_blank"><div class="four">Portfolio (this website)</div></a>
@@ -54,7 +54,9 @@
                 quis maximus tortor lorem eu nunc. Nunc tempor vehicula turpis, eu sollicitudin turpis. Integer iaculis nec eros quis viverra.
                 Aliquam convallis rhoncus leo vel cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
                 Fusce id ipsum sit amet nibh consectetur molestie. Aliquam eget dolor eros.
-                Donec ut urna ut quam ultricies commodo sit amet sit amet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                Donec ut urna ut quam ultricies commodo sit amet sit amet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="toggleBut">Go Back</button></p>
         </div>
     </main>
     <footer>
@@ -65,16 +67,30 @@
     <script>
         const hamMenu = document.querySelector('.ham-menu');
         const offScreenMenu = document.querySelector('.off-screen-menu')
-        const popoutWin = document.querySelector('.popoutWindow')
-
-        popoutWin.addEventListener('click', () => {
-            popoutWin.classList.toggle('active');
-        });
 
         hamMenu.addEventListener('click', () => {
             hamMenu.classList.toggle('active');
             offScreenMenu.classList.toggle('active');
         });
+        
+        /*will need to refresh in order to access the history and accreditations page*/
+        document.getElementById('toggleButton').addEventListener('click', function () {
+
+            const popoutWindow = document.querySelector('.popoutWindow')
+
+            popoutWindow.classList.toggle('hidden')
+
+        });
+
+        /*will need to refresh in order to access the history and accreditations page*/
+        document.getElementById('toggleBut').addEventListener('click', function () {
+
+            const closepopoutWind = document.querySelector('.popoutWindow')
+
+            closepopoutWind.classList.toggle('revealed')
+
+        });
+
     </script>
 </body>
 </html>
