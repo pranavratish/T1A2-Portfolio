@@ -8,20 +8,26 @@
 </head>
 <body>
     <header>
-        <h1>Pranav</h1>
-        <nav>
+        <!--navbar for desktop and tablet viewpoint-->
+        <nav class="desktop-tablet-nav">
+            <h1>Pranav</h1>
             <a href="">About Me</a>
             <a href="">Projects</a>
             <a href="">Blog</a>
         </nav>
+        <!--hamburger menu; only for mobile view-->
         <div class="off-screen-menu">
-            <ul>
+            <!-- <ul>
                 <li>About Me</li>
                 <li>Projects</li>
                 <li>Blog</li>
-            </ul>
+            </ul> -->
+            <a href="">About Me</a>
+            <a href="">Projects</a>
+            <a href="">Blog</a>
         </div>
         <nav>
+            <h1>Pranav</h1>
             <div class="ham-menu">
                 <span></span>
                 <span></span>
@@ -43,5 +49,13 @@
         <a href="">Twitter</a>
         <a href="">LinkedIn</a>
     </footer>
+    <script>
+        const hamMenu = document.querySelector('.ham-menu');
+        const offScreenMenu = document.querySelector('.off-screen-menu')
+        hamMenu.addEventListener('click', () => {
+            hamMenu.classList.toggle('active');
+            offScreenMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

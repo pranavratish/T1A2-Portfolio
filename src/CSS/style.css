@@ -1,3 +1,4 @@
+/*colour variables and general text colour*/
 * {
     --dark-blue: #0D1B2A;
     --beige: #E0E1DD;
@@ -7,11 +8,101 @@
     color: #E0E1DD;
 }
 
+/*body styling*/
 body {
     background-color: var(--dark-blue);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    text-align: center;
+}
+
+/*header styling*/
+header {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    background-color: var(--dark-grey-blue);
+}
+
+/*footer styling*/
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--dark-grey-blue);
+}
+
+/*hamburger menu*/
+.off-screen-menu {
+    background-color: var(--dark-grey-blue);
+    height: 75%;
+    width: 50%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+nav {
+    display: flex;
+    margin: 10px;
+    background-color: var(--dark-grey-blue);
+}
+
+/*no navbar for mobile viewport*/
+.desktop-tablet-nav {
+    display: none;
+}
+
+/*collapsible(hamburger) menu icon*/
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 50px;
+    background-color: var(--grey-blue);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+/*hamMenu icon turns into an X when the menu is open*/
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
 }
