@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav's Portfolio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header>
+        <!--navbar for desktop and tablet viewpoint-->
+        <nav class="desktop-tablet-nav">
+            <ul>
+                <li><h1>Pranav</h1></li>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Me</a></li>
+                <li><a href="projects.html" target="_blank">Projects</a></li>
+                <li><a href="blog.html" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+        <!--hamburger menu; only for mobile view-->
+        <div class="off-screen-menu">
+            <nav>
+                <ul class="menu-links">
+                    <li><a href="index.html" target="_blank">HOME</a></li>
+                    <li><a href="about.html" target="_blank">ABOUT ME</a></li>
+                    <li><a href="projects.html" target="_blank">PROJECTS</a></li>
+                    <li><a href="blog.html" target="_blank">BLOG</a></li>
+                </ul> 
+            </nav>  
+        </div>
+        <nav class="mobile-nav">
+            <h1>Pranav</h1>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="blogMain">
+    </main>
+    <footer>
+        <a href="">GitHub</a>
+        <a href="">Twitter</a>
+        <a href="">LinkedIn</a>
+    </footer>
+    <script>
+        const hamMenu = document.querySelector('.ham-menu');
+        const offScreenMenu = document.querySelector('.off-screen-menu')
+        hamMenu.addEventListener('click', () => {
+            hamMenu.classList.toggle('active');
+            offScreenMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
