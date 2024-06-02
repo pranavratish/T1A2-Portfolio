@@ -252,6 +252,134 @@ nav {
     font-style: oblique;
 }
 
+.aboutDiv img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.aboutDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.post1Div img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.post1Div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.post2Div img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.post2Div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.post3Div img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.post3Div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.post4Div img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.post4Div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.post5Div img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.post5Div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.bloghpDiv {
+    display: flex;
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+.bloghpDiv .Post:nth-child(1) {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey-blue);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.bloghpDiv .Post:nth-child(2) {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.bloghpDiv .Post:nth-child(3) {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey-blue);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.bloghpDiv .Post:nth-child(4) {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-style: oblique;
+}
+.bloghpDiv .Post:nth-child(5) {
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey-blue);
+    font-weight: bold;
+    font-style: oblique;
+}
+
 @media only screen and (min-width: 600px) {
     .ham-menu {
         display: none;
@@ -305,6 +433,18 @@ nav {
         float: left;
     }
 
+}
+
+@media only screen and (max-width:600px) {
+    .popoutWindow {
+        margin-left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 801px) {
+    .popoutWindow {
+        margin-left: -20vw;
+    }
 }
 
 @media only screen and (min-width: 801px) {
